@@ -1,7 +1,7 @@
 ﻿# Личный проект «Глейси»
 
 * Студент: [Татьяна Апалькова](https://up.htmlacademy.ru/htmlcss/17/user/169277).
-* Наставник: [Екатерина Анплитова](https://up.htmlacademy.ru/htmlcss/17/tutors).
+* Наставник: [Екатерина Анплитова](https://htmlacademy.ru/profile/anplitova).
 
 ---
 
