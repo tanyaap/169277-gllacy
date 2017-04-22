@@ -45,21 +45,27 @@
         <div class="user-block">
           <div class="search-block">
             <button class="search" type="button"></button>
-              <div class="search-line">
+              <div class="form-block search-line">
                 <form name="search-form" action="https://echo.htmlacademy.ru" method="get">
-                  <label for="search-field">Что ищем?</label>
-                  <input type="search" name="search-text" id="search-field" value="" placeholder="Что ищем?">
+                  <div class="form-field-block">
+                    <input type="search" name="search-text" id="search-field" value="" placeholder="Что ищем?">
+                    <label for="search-field">Что ищем?</label>
+                  </div>
                 </form>
               </div>
           </div>
           <div class="login-block">
             <button class="login" type="button">Вход</button>
-              <div class="login-field">
+              <div class="form-block login-field">
                 <form name="login-form" action="https://echo.htmlacademy.ru" method="get">
-                  <label for="email-field">Электронная почта</label>
+                  <div class="form-field-block">
                     <input type="email" name="email" id="email-field" value="" placeholder="Электронная почта">
-                  <label for="password-field">Электронная почта</label>
+                    <label for="email-field">Электронная почта</label>
+                  </div>
+                  <div class="form-field-block">
                     <input type="password" name="password" id="password-field" value="" placeholder="Пароль">
+                    <label for="password-field">Пароль</label>
+                  </div>
                   <button class="btn btn-login" type="submit">Войти</button>
                   <a class="login" href="#" title="Забыли пароль?">Забыли пароль?</a>
                   <a class="login" href="#" title="Новая регистрация">Новая регистрация</a>
@@ -75,30 +81,25 @@
           <a href="tel:+78124502525" title="+7 (812) 450-25-25">+7 (812) 450-25-25</a>
         </div>
         <article class="slider">
-          <div>
-            <h1 class="main-heading">Крем-брюле и пломбир с малиновым джемом</h1>
-            <img src="http://placehold.it/500x500" width="500" height="500" alt="Gllacy Shop">
-          </div>
-          <label for="slider-one"></label>
-          <input type="radio" name="slider-switch" value="slider-first" id="slider-one" checked>
+          <h2 class="main-heading">Крем-брюле и пломбир с малиновым джемом</h2>
+          <img src="http://placehold.it/500x500" width="500" height="500" alt="Gllacy Shop">
+          <a href="#" class="btn btn-give-both" title="Давайте оба!">Давайте оба!</a>
         </article>
         <article class="slider">
-          <div>
-            <h1 class="main-heading">Шоколадный пломбир и лимонный сорбет</h1>
-            <img src="http://placehold.it/500x500" width="500" height="500" alt="Gllacy Shop">
-          </div>
-          <label for="slider-two"></label>
-          <input type="radio" name="slider-switch" value="slider-second" id="slider-two">
+          <h2 class="main-heading">Шоколадный пломбир и лимонный сорбет</h2>
+          <img src="http://placehold.it/500x500" width="500" height="500" alt="Gllacy Shop">
+          <a href="#" class="btn btn-give-both" title="Давайте оба!">Давайте оба!</a>
         </article>
         <article class="slider">
-          <div>
-            <h1 class="main-heading">Пломбир с помадкой и клубничный щербет</h1>
-            <img src="http://placehold.it/500x500" width="500" height="500" alt="Gllacy Shop">
-          </div>
-          <label for="slider-three"></label>
-          <input type="radio" name="slider-switch" value="slider-third" id="slider-three">
+          <h2 class="main-heading">Пломбир с помадкой и клубничный щербет</h2>
+          <img src="http://placehold.it/500x500" width="500" height="500" alt="Gllacy Shop">
+          <a href="#" class="btn btn-give-both" title="Давайте оба!">Давайте оба!</a>
         </article>
-        <a href="#" class="btn btn-give-both" title="Давайте оба!">Давайте оба!</a>
+        <div class="slider-manager">
+          <input type="radio" name="slider-switch" value="slider-first" checked>
+          <input type="radio" name="slider-switch" value="slider-second">
+          <input type="radio" name="slider-switch" value="slider-third">
+        </div>
       </div>
     </header>
     <main class="container">
@@ -114,58 +115,58 @@
           <a href="#" class="btn btn-want" title="Хочу шоколадки!">Хочу шоколадки!</a>
         </article>
       </section>
-      <section class="catalog-items">
-        <article class="catalog-items-hit">
+      <section class="catalog-item">
+        <article class="catalog-item catalog-hit">
           <div>
             <img src="http://placehold.it/200x200" width="200" height="200" alt="">
             <span>310 <span>&#x584;/кг</span></span>
           </div>
-          <h3>
+          <h2>
             <a href="#" title="Сливочное с апельсиновым джемом и цитрусовой стружкой">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-          </h3>
+          </h2>
           <div>
-            <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+            <a href="#" class="btn btn-fastlook" type="button">Быстрый просмотр</a>
           </div>
         </article>
-        <article class="catalog-items-hit">
+        <article class="catalog-item catalog-hit">
           <div>
             <img src="http://placehold.it/200x200" width="200" height="200" alt="">
             <span>380 <span>&#x584;/кг</span></span>
           </div>
-          <h3>
+          <h2>
             <a href="#" title="Сливочно-кофейное с кусочками шоколада">Сливочно-кофейное с кусочками шоколада</a>
-          </h3>
+          </h2>
           <div>
-            <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+            <a href="#" class="btn btn-fastlook" type="button">Быстрый просмотр</a>
           </div>
-        </article class="catalog-items-hit">
+        </article class="catalog-item catalog-hit">
         <article>
           <div>
             <img src="http://placehold.it/200x200" width="200" height="200" alt="">
             <span>355 <span>&#x584;/кг</span></span>
           </div>
-          <h3>
+          <h2>
             <a href="#" title="Сливочно-клубничное с присыпкой из белого шоколада">Сливочно-клубничное с присыпкой из белого шоколада</a>
-          </h3>
+          </h2>
           <div>
-            <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+            <a href="#" class="btn btn-fastlook" type="button">Быстрый просмотр</a>
           </div>
-        </article class="catalog-items-hit">
+        </article class="catalog-item catalog-hit">
         <article>
           <div>
             <img src="http://placehold.it/200x200" width="200" height="200" alt="">
             <span>415 <span>&#x584;/кг</span></span>
           </div>
-          <h3>
+          <h2>
             <a href="#" title="Сливочное крем-брюле с карамельной подливкой">Сливочное крем-брюле с карамельной подливкой</a>
-          </h3>
+          </h2>
           <div>
-            <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+            <a href="#" class="btn btn-fastlook" type="button">Быстрый просмотр</a>
           </div>
         </article>
       </section>
       <section class="description">
-        <h2>Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h2>
+        <h1>Магазин Глейси - это онлайн и офлайн магазин по продаже мороженого собственного производства на развес</h1>
           <ul>
             <li>
               <p>Все наше мороженое изготавливается на собственном производстве с использованием современного оборудования и проверенных временем технологий.</p>
@@ -188,18 +189,18 @@
         </article>
         <article class="subscription">
           <p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-          <div class="subscription-block">
+          <div class="form-block subscription-block">
             <form name="subscription-form" action="https://echo.htmlacademy.ru" method="get">
-              <label for="subscription-field">Электронная почта</label>
+              <div class="form-field-block">
                 <input type="text" name="subscription" id="subscription-field" value="" placeholder="Электронная почта">
-                <button class="btn btn-submit" type="submit">Отправить</button>
-              </label>
+                <label for="subscription-field">Электронная почта</label>
+              </div>
+              <button class="btn btn-submit" type="submit">Отправить</button>
             </form>
           </div>
         </article>
       </section>
       <section class="map-info-block">
-        <!-- здесь изображена карта -->
         <div class="contacts">
           <p>
             Адрес главного офиса и<br>
@@ -264,15 +265,21 @@
         </section>
       </div>
     </footer>
-    <div class="feedback-modal-window">
+    <div class="form-block feedback-modal-window">
       <h2>Мы обязательно Вам ответим!</h2>
       <form name="feedback-form" action="https://echo.htmlacademy.ru" method="get">
-        <label for="feedback-name-field">Как вас зовут?</label>
+        <div class="form-field-block">
           <input type="text" name="name" id="feedback-name-field" value="" placeholder="Как вас зовут?">
-        <label for="feedback-email-field">Ваша почта для ответа?</label>
+          <label for="feedback-name-field">Как вас зовут?</label>
+        </div>
+        <div class="form-field-block">
           <input type="email" name="email" id="feedback-email-field" value="" placeholder="Ваша почта для ответа?">
-        <label for="textarea-field">Напишите что-нибудь&#8230;</label>
+          <label for="feedback-email-field">Ваша почта для ответа?</label>
+        </div>
+        <div class="form-field-block">
           <textarea id="textarea-field" cols="40" rows="10" placeholder="Напишите что-нибудь&#8230;"></textarea>
+          <label for="textarea-field">Напишите что-нибудь&#8230;</label>
+        </div>
           <button class="btn btn-submit-modal" type="submit">Отправить</button>
       </form>
     </div>
