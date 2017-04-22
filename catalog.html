@@ -18,6 +18,9 @@
               <a href="#" title="Каталог">Каталог</a>
                 <ul>
                   <li>
+                    <a title="Новинки">Новинки</a>
+                  </li>
+                  <li>
                     <a title="Сливочное">Сливочное</a>
                   </li>
                   <li>
@@ -40,35 +43,56 @@
           </ul>
         </nav>
         <div class="user-block">
-          <ul>
-            <li>
-              <button class="search" type="button"></button>
-                <div class="search-line">
-                  <form action="https://echo.htmlacademy.ru" method="get">
-                    <input type="search" name="search-text" value="" placeholder="Что ищем?">
-                  </form>
-                </div>
-            </li>
-            <li>
-              <button class="login" type="button">Вход</button>
-                <div class="login-field">
-                  <form action="https://echo.htmlacademy.ru" method="get">
-                    <input type="email" name="email" value="" placeholder="Электронная почта">
-                    <input type="password" name="password" value="" placeholder="Пароль">
-                    <button class="btn btn-login" type="submit">Войти</button>
-                    <a class="login" href="#" title="Забыли пароль?">Забыли пароль?</a>
-                    <a class="login" href="#" title="Новая регистрация">Новая регистрация</a>
-                  </form>
-                </div>
-            </li>
-            <li>
-              <a class="cart-full" href="#" title="Корзина">2 товара</a>
-            </li>
-          </ul>
+          <div class="search-block">
+            <button class="search" type="button"></button>
+              <div class="search-line">
+                <form name="search-form" action="https://echo.htmlacademy.ru" method="get">
+                  <label for="search-field">Что ищем?</label>
+                  <input type="search" name="search-text" id="search-field" value="" placeholder="Что ищем?">
+                </form>
+              </div>
+          </div>
+          <div class="login-block">
+            <button class="login" type="button">Вход</button>
+              <div class="login-field">
+                <form name="login-form" action="https://echo.htmlacademy.ru" method="get">
+                  <label for="email-field">Электронная почта</label>
+                    <input type="email" name="email" id="email-field" value="" placeholder="Электронная почта">
+                  <label for="password-field">Электронная почта</label>
+                    <input type="password" name="password" id="password-field" value="" placeholder="Пароль">
+                  <button class="btn btn-login" type="submit">Войти</button>
+                  <a class="login" href="#" title="Забыли пароль?">Забыли пароль?</a>
+                  <a class="login" href="#" title="Новая регистрация">Новая регистрация</a>
+                </form>
+              </div>
+          </div>
+          <div class="cart-block">
+            <a class="cart-full" href="#" title="Корзина">2 товара</a>
+              <div>
+                <table>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Пломбир с апельсиновым джемом</td>
+                    <td>1,5 кг &#215; 200 <span>руб.</span></td>
+                    <td>300 <span>руб.</span></td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                    <td>1,5 кг &#215; 300 <span>руб.</span></td>
+                    <td>450 <span>руб.</span></td>
+                  </tr>
+                </table>
+                <span>Итого: 750 <span>руб.</span></span>
+                <a href="#" class="cart-order" title="Оформить заказ">Оформить заказ</a>
+              </div>
+          </div>
         </div>
         <div class="header-info-block">
           <span>с 10 до 20 ежедневно</span><br>
-          <span>8 812 450-25-25</span>
+          <a href="tel:+78124502525" title="+7 (812) 450-25-25">+7 (812) 450-25-25</a>
         </div>
       </div>
     </header>
@@ -77,31 +101,32 @@
         <ul>
           <li>
             <a href="index.html" title="Главная">Главная</a>
-            <div class="next-level"></div>
           </li>
           <li>
             <a href="#" title="Каталог">Каталог</a>
-            <div class="next-level"></div>
           </li>
           <li>
             <a title="Сливочное">Сливочное</a>
           </li>
         </ul>
       </nav>
-      <form action="https://echo.htmlacademy.ru/" method="get">
+      <form name="preferences-form" action="https://echo.htmlacademy.ru/" method="get">
         <div class="preferences">
           <label for="preferences-field">Сортировка:</label>
           <select name="preferences" id="preferences-field">
-            <option value="по популярности">по популярности</option>
+            <option value="sort-popularity">по популярности</option>
+            <option value="sort-price-lower">сначала недорогие</option>
+            <option value="sort-price-higher">сначала дорогие</option>
+            <option value="sort-fat-content">по жирности</option>
           </select>
         </div>
         <div class="range-manage">
           <p>Цена: 100 <span class="currency">руб.</span> - 500 <span class="currency">руб.</span></p>
             <div class="scale">
               <div class="scale-over"></div>
+              <div class="switch"></div>
+              <div class="switch"></div>
             </div>
-            <div class="switch"></div>
-            <div class="switch"></div>
         </div>
         <fieldset class="fat-content">
           <legend>Жирность:</legend>
@@ -111,15 +136,15 @@
                 <label for="fat-zero-percent">0%</label>
               </li>
               <li>
-                <input type="radio" name="fat-content-field" value="до 10%" id="fat-ten-percent" checked>
+                <input type="radio" name="fat-content-field" value="up-to-10%" id="fat-ten-percent" checked>
                 <label for="fat-ten-percent">до 10%</label>
               </li>
               <li>
-                <input type="radio" name="fat-content-field" value="до 30%" id="fat-thirty-percent">
+                <input type="radio" name="fat-content-field" value="up-to-30%" id="fat-thirty-percent">
                 <label for="fat-thirty-percent">до 30%</label>
               </li>
               <li>
-                <input type="radio" name="fat-content-field" value="выше 30%" id="fat-overthirty-percent">
+                <input type="radio" name="fat-content-field" value="over-30%" id="fat-overthirty-percent">
                 <label for="fat-overthirty-percent">выше 30%</label>
               </li>
             </ul>
@@ -153,161 +178,198 @@
       </form>
       <section class="catalog-items">
         <article>
-          <a href="#" title="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+          <div>
             <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-            <p>310 &#x584;/кг</p>
-          </a>
-          <a href="#" title="Сливочное с апельсиновым джемом и цитрусовой стружкой">
-            <p>Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
-          </a>
-          <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+            <span>310 <span>&#x584;/кг</span></span>
+          </div>
+          <h1>
+            <a href="#" title="Сливочное с апельсиновым джемом и цитрусовой стружкой">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+          </h1>
+          <div>
+            <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+          </div>
         </article>
         <article>
-          <a href="#" title="Сливочно-кофейное с кусочками шоколада">
+          <div>
             <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-            <p>380 &#x584;/кг</p>
-          </a>
-          <a href="#" title="Сливочно-кофейное с кусочками шоколада">
-            <p>Сливочно-кофейное с кусочками шоколада</p>
-          </a>
-          <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+            <span>380 <span>&#x584;/кг</span></span>
+          </div>
+          <h1>
+            <a href="#" title="Сливочно-кофейное с кусочками шоколада">Сливочно-кофейное с кусочками шоколада</a>
+          </h1>
+          <div>
+            <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+          </div>
         </article>
         <article>
-          <a href="#" title="Сливочно-клубничное с присыпкой из белого шоколада">
+          <div>
             <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-            <p>355 &#x584;/кг</p>
-          </a>
-          <a href="#" title="Сливочно-клубничное с присыпкой из белого шоколада">
-            <p>Сливочно-клубничное с присыпкой из белого шоколада</p>
-          </a>
-          <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+            <span>355 <span>&#x584;/кг</span></span>
+          </div>
+          <h1>
+            <a href="#" title="Сливочно-клубничное с присыпкой из белого шоколада">Сливочно-клубничное с присыпкой из белого шоколада</a>
+          </h1>
+          <div>
+            <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+          </div>
         </article>
         <article>
-          <a href="#" title="Сливочное крем-брюле с карамельной подливкой">
+          <div>
             <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-            <p>355 &#x584;/кг</p>
-          </a>
-          <a href="#" title="Сливочное крем-брюле с карамельной подливкой">
-            <p>Сливочное крем-брюле с карамельной подливкой</p>
-          </a>
-          <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+            <span>415 <span>&#x584;/кг</span></span>
+          </div>
+          <h1>
+            <a href="#" title="Сливочное крем-брюле с карамельной подливкой">Сливочное крем-брюле с карамельной подливкой</a>
+          </h1>
+          <div>
+            <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+          </div>
         </article>
         <article>
-          <a href="#" title="Сливочное с брусничным джемом">
+          <div>
             <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-            <p>325 &#x584;/кг</p>
-          </a>
-          <a href="#" title="Сливочное с брусничным джемом">
-            <p>Сливочное с брусничным джемом</p>
-          </a>
-          <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+            <span>325 <span>&#x584;/кг</span></span>
+          </div>
+          <h1>
+            <a href="#" title="Сливочное с брусничным джемом">Сливочное с брусничным джемом</a>
+          </h1>
+          <div>
+            <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+          </div>
         </article>
         <article>
-          <a href="#" title="Сливочно-черничное с цельными ягодами черники">
+          <div>
             <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-            <p>410 &#x584;/кг</p>
-          </a>
-          <a href="#" title="Сливочно-черничное с цельными ягодами черники">
-            <p>Сливочно-черничное с цельными ягодами черники</p>
-          </a>
-          <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+            <span>410 <span>&#x584;/кг</span></span>
+          </div>
+          <h1>
+            <a href="#" title="Сливочно-черничное с цельными ягодами черники">Сливочно-черничное с цельными ягодами черники</a>
+          </h1>
+          <div>
+            <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+          </div>
         </article>
         <article>
-          <a href="#" title="Сливочно-лимонное с карамельной присыпкой">
+          <div>
             <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-            <p>375 &#x584;/кг</p>
-          </a>
-          <a href="#" title="Сливочно-лимонное с карамельной присыпкой">
-            <p>Сливочно-лимонное с карамельной присыпкой</p>
-          </a>
-          <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+            <span>375 <span>&#x584;/кг</span></span>
+          </div>
+          <h1>
+            <a href="#" title="Сливочно-лимонное с карамельной присыпкой">Сливочно-лимонное с карамельной присыпкой</a>
+          </h1>
+          <div>
+            <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+          </div>
         </article>
         <article>
-          <a href="#" title="Сливочное с шоколадной стружкой">
+          <div>
             <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-            <p>320 &#x584;/кг</p>
-          </a>
-          <a href="#" title="Сливочное с шоколадной стружкой">
-            <p>Сливочное с шоколадной стружкой</p>
-          </a>
-          <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+            <span>320 <span>&#x584;/кг</span></span>
+          </div>
+          <h1>
+            <a href="#" title="Сливочное с шоколадной стружкой">Сливочное с шоколадной стружкой</a>
+          </h1>
+          <div>
+            <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+          </div>
         </article>
         <article>
-          <a href="#" title="Сливочно-ванильное с кусочками шоколада">
+          <div>
             <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-            <p>440 &#x584;/кг</p>
-          </a>
-          <a href="#" title="Сливочно-ванильное с кусочками шоколада">
-            <p>Сливочно-ванильное с кусочками шоколада</p>
-          </a>
-          <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+            <span>440 <span>&#x584;/кг</span></span>
+          </div>
+          <h1>
+            <a href="#" title="Сливочно-ванильное с кусочками шоколада">Сливочно-ванильное с кусочками шоколада</a>
+          </h1>
+          <div>
+            <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+          </div>
         </article>
         <article>
-          <a href="#" title="Сливочное с ментоловым сиропом">
+          <div>
             <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-            <p>435 &#x584;/кг</p>
-          </a>
-          <a href="#" title="Сливочное с ментоловым сиропом">
-            <p>Сливочное с ментоловым сиропом</p>
-          </a>
-          <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+            <span>435 <span>&#x584;/кг</span></span>
+          </div>
+          <h1>
+            <a href="#" title="Сливочное с ментоловым сиропом">Сливочное с ментоловым сиропом</a>
+          </h1>
+          <div>
+            <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+          </div>
         </article>
         <article>
-          <a href="#" title="Сливочное с кусочками черного шоколада">
+          <div>
             <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-            <p>355 &#x584;/кг</p>
-          </a>
-          <a href="#" title="Сливочное с кусочками черного шоколада">
-            <p>Сливочное с кусочками черного шоколада</p>
-          </a>
-          <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+            <span>355 <span>&#x584;/кг</span></span>
+          </div>
+          <h1>
+            <a href="#" title="Сливочное с кусочками черного шоколада">Сливочное с кусочками черного шоколада</a>
+          </h1>
+          <div>
+            <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+          </div>
         </article>
         <article>
-          <a href="#" title="Сливочное с мятным сиропом">
+          <div>
             <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-            <p>420 &#x584;/кг</p>
-          </a>
-          <a href="#" title="Сливочное с мятным сиропом">
-            <p>Сливочное с мятным сиропом</p>
-          </a>
-          <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+            <span>420 <span>&#x584;/кг</span></span>
+          </div>
+          <h1>
+            <a href="#" title="Сливочное с мятным сиропом">Сливочное с мятным сиропом</a>
+          </h1>
+          <div>
+            <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+          </div>
         </article>
       </section>
       <section class="page-numbers">
         <div class="prev"></div>
         <ul>
           <li>
-            <a class="current-page-number" title="page 1">1</a>
+            <a href="#" class="prev" title="Предыдущая страница"></a>
           </li>
           <li>
-            <a href="#" title="page 2">2</a>
+            <a class="current-page-number" title="Страница 1">1</a>
           </li>
           <li>
-            <a href="#" title="page 3">3</a>
+            <a href="#" title="Страница 2">2</a>
           </li>
           <li>
-            <a href="#" title="page 4">4</a>
+            <a href="#" title="Страница 3">3</a>
           </li>
           <li>
-            <a href="#" title="page 5">5</a>
+            <a href="#" title="Страница 4">4</a>
+          </li>
+          <li>
+            <a href="#" title="Страница 5">5</a>
+          </li>
+          <li>
+            <a href="#" class="next" title="Следующая страница"></div>
           </li>
         </ul>
-        <div class="next"></div>
       </section>
     </main>
     <footer class="main-footer">
       <div class="container">
         <section class="footer-social">
-          <a class="social-btn social-btn-tw" href="#" title="Твиттер">Твиттер</a>
-          <a class="social-btn social-btn-inst" href="#" title="Инстаграм">Инстаграм</a>
-          <a class="social-btn social-btn-fb" href="#" title="Фейсбук">Фейсбук</a>
-          <a class="social-btn social-btn-vk" href="#" title="Вконтакте">Вконтакте</a>
+          <ul>
+            <li>
+              <a class="social-btn social-btn-tw" href="#" title="Твиттер">Твиттер</a>
+            </li>
+            <li>
+              <a class="social-btn social-btn-inst" href="#" title="Инстаграм">Инстаграм</a>
+            </li>
+            <li>
+              <a class="social-btn social-btn-fb" href="#" title="Фейсбук">Фейсбук</a>
+            </li>
+            <li>
+              <a class="social-btn social-btn-vk" href="#" title="Вконтакте">Вконтакте</a>
+            </li>
+          </ul>
         </section>
         <section class="footer-breadcrumbs">
-          <menu class="footer-menu">
             <ul>
               <li>
-                <img src="http://placehold.it/20x20" width="20" height="20" alt="">
                 <a href="#" title="Для поставщиков">Для поставщиков</a>
               </li>
               <li>
@@ -320,7 +382,6 @@
                 <a href="#" title="Экологические стандарты">Экологические стандарты</a>
               </li>
             </ul>
-          </menu>
         </section>
         <section class="footer-copyright">
           <a href="https://htmlacademy.ru/intensive/htmlcss" title="HTML Academy">
@@ -329,7 +390,7 @@
           <p>
             Сделано в
             <a class="footer-logo" href="https://htmlacademy.ru/intensive/htmlcss" title="HTML Academy">HTML Academy</a>
-            &#169; 2016
+            &#169; 2017
           </p>
         </section>
       </div>
