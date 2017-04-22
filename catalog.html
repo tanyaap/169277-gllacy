@@ -3,13 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="main-header">
       <div class="container"> <!-- класс-центровщик здесь и далее -->
         <div class="logo">
           <a href="index.html" title="Gllacy Shop">
-            <img src="http://placehold.it/150x80" width="150" height="80" alt="Gllacy Shop">
+            <img src="http://placehold.it/154x64" width="154" height="64" alt="Gllacy Shop">
           </a>
         </div>
         <nav class="main-navigaion">
@@ -18,7 +19,7 @@
               <a href="#" title="Каталог">Каталог</a>
                 <ul>
                   <li>
-                    <a title="Новинки">Новинки</a>
+                    <a href="#" title="Новинки">Новинки</a>
                   </li>
                   <li>
                     <a title="Сливочное">Сливочное</a>
@@ -45,42 +46,60 @@
         <div class="user-block">
           <div class="search-block">
             <button class="search" type="button"></button>
-              <div class="search-line">
-                <form name="search-form" action="https://echo.htmlacademy.ru" method="get">
-                  <label for="search-field">Что ищем?</label>
+            <div class="form-block search-line">
+              <form name="search-form" action="https://echo.htmlacademy.ru" method="get">
+                <div class="form-field-block">
                   <input type="search" name="search-text" id="search-field" value="" placeholder="Что ищем?">
-                </form>
-              </div>
+                  <label for="search-field">Что ищем?</label>
+                </div>
+              </form>
+            </div>
           </div>
           <div class="login-block">
             <button class="login" type="button">Вход</button>
-              <div class="login-field">
-                <form name="login-form" action="https://echo.htmlacademy.ru" method="get">
+            <div class="form-block login-field">
+              <form name="login-form" action="https://echo.htmlacademy.ru" method="get">
+                <div class="form-field-block">
+                  <input type="email" name="email" id="email-field" value="" placeholder="Электронная почта">
                   <label for="email-field">Электронная почта</label>
-                    <input type="email" name="email" id="email-field" value="" placeholder="Электронная почта">
-                  <label for="password-field">Электронная почта</label>
-                    <input type="password" name="password" id="password-field" value="" placeholder="Пароль">
-                  <button class="btn btn-login" type="submit">Войти</button>
-                  <a class="login" href="#" title="Забыли пароль?">Забыли пароль?</a>
-                  <a class="login" href="#" title="Новая регистрация">Новая регистрация</a>
-                </form>
-              </div>
+                </div>
+                <div class="form-field-block">
+                  <input type="password" name="password" id="password-field" value="" placeholder="Пароль">
+                  <label for="password-field">Пароль</label>
+                </div>
+                <button class="btn btn-login" type="submit">Войти</button>
+                <a class="login" href="#" title="Забыли пароль?">Забыли пароль?</a>
+                <a class="login" href="#" title="Новая регистрация">Новая регистрация</a>
+              </form>
+            </div>
           </div>
           <div class="cart-block">
             <a class="cart-full" href="#" title="Корзина">2 товара</a>
               <div>
                 <table>
                   <tr>
-                    <td></td>
-                    <td></td>
-                    <td>Пломбир с апельсиновым джемом</td>
+                    <td><button type="button">Удалить</button></td>
+                    <td>
+                      <a href="#" title="Пломбир с апельсиновым джемом">
+                        <img src="http://placehold.it/33x33" width="33" height="33" alt="">
+                      </a>
+                    </td>
+                    <td>
+                      <a href="#" title="Пломбир с апельсиновым джемом">Пломбир с апельсиновым джемом</a>
+                    </td>
                     <td>1,5 кг &#215; 200 <span>руб.</span></td>
                     <td>300 <span>руб.</span></td>
                   </tr>
                   <tr>
-                    <td></td>
-                    <td></td>
-                    <td>Клубничный пломбир с присыпкой из белого шоколада</td>
+                    <td><button type="button">Удалить</button></td>
+                    <td>
+                      <a href="#" title="Клубничный пломбир с присыпкой из белого шоколада">
+                        <img src="http://placehold.it/33x33" width="33" height="33" alt="">
+                      </a>
+                    </td>
+                    <td>
+                      <a href="#" title="Клубничный пломбир с присыпкой из белого шоколада">Клубничный пломбир с присыпкой из белого шоколада</a>
+                    </td>
                     <td>1,5 кг &#215; 300 <span>руб.</span></td>
                     <td>450 <span>руб.</span></td>
                   </tr>
@@ -97,8 +116,8 @@
       </div>
     </header>
     <main class="container">
-      <nav class="main-breadcrumbs">
-        <ul>
+      <div class="main-menu-header">
+        <ul class="main-breadcrumbs">
           <li>
             <a href="index.html" title="Главная">Главная</a>
           </li>
@@ -109,17 +128,18 @@
             <a title="Сливочное">Сливочное</a>
           </li>
         </ul>
-      </nav>
+        <h1 class="main-heading">Сливочное мороженое</h1>
+      </div>
       <form name="preferences-form" action="https://echo.htmlacademy.ru/" method="get">
-        <div class="preferences">
-          <label for="preferences-field">Сортировка:</label>
-          <select name="preferences" id="preferences-field">
-            <option value="sort-popularity">по популярности</option>
-            <option value="sort-price-lower">сначала недорогие</option>
-            <option value="sort-price-higher">сначала дорогие</option>
-            <option value="sort-fat-content">по жирности</option>
-          </select>
-        </div>
+        <fieldset class="preferences">
+          <legend>Сортировка:</legend>
+            <select name="preferences">
+              <option value="sort-popularity">по популярности</option>
+              <option value="sort-price-lower">сначала недорогие</option>
+              <option value="sort-price-higher">сначала дорогие</option>
+              <option value="sort-fat-content">по жирности</option>
+            </select>
+        </fieldset>
         <div class="range-manage">
           <p>Цена: 100 <span class="currency">руб.</span> - 500 <span class="currency">руб.</span></p>
             <div class="scale">
@@ -176,154 +196,153 @@
         </fieldset>
         <button class="btn-catalog-apply" type="submit">Применить</button>
       </form>
-      <section class="catalog-items">
-        <article>
+      <section class="catalog-items-block">
+        <article class="catalog-item">
           <div>
-            <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-            <span>310 <span>&#x584;/кг</span></span>
+            <img src="http://placehold.it/267x267" width="267" height="267" alt="">
+            <span>310 <span class="catalog-item-currency">&#x584;/кг</span></span>
           </div>
-          <h1>
+          <h2>
             <a href="#" title="Сливочное с апельсиновым джемом и цитрусовой стружкой">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
-          </h1>
+          </h2>
           <div>
-            <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+            <a href="#" class="btn btn-fastlook" title="Быстрый просмотр">Быстрый просмотр</a>
           </div>
         </article>
-        <article>
+        <article class="catalog-item">
           <div>
-            <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-            <span>380 <span>&#x584;/кг</span></span>
+            <img src="http://placehold.it/267x267" width="267" height="267" alt="">
+            <span>380 <span class="catalog-item-currency">&#x584;/кг</span></span>
           </div>
-          <h1>
+          <h2>
             <a href="#" title="Сливочно-кофейное с кусочками шоколада">Сливочно-кофейное с кусочками шоколада</a>
-          </h1>
+          </h2>
           <div>
-            <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+            <a href="#" class="btn btn-fastlook" title="Быстрый просмотр">Быстрый просмотр</a>
           </div>
         </article>
-        <article>
+        <article class="catalog-item">
           <div>
-            <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-            <span>355 <span>&#x584;/кг</span></span>
+            <img src="http://placehold.it/267x267" width="266" height="267" alt="">
+            <span>355 <span class="catalog-item-currency">&#x584;/кг</span></span>
           </div>
-          <h1>
+          <h2>
             <a href="#" title="Сливочно-клубничное с присыпкой из белого шоколада">Сливочно-клубничное с присыпкой из белого шоколада</a>
-          </h1>
+          </h2>
           <div>
-            <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+            <a href="#" class="btn btn-fastlook" title="Быстрый просмотр">Быстрый просмотр</a>
           </div>
         </article>
-        <article>
+        <article class="catalog-item">
           <div>
-            <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-            <span>415 <span>&#x584;/кг</span></span>
+            <img src="http://placehold.it/267x267" width="267" height="267" alt="">
+            <span>415 <span class="catalog-item-currency">&#x584;/кг</span></span>
           </div>
-          <h1>
+          <h2>
             <a href="#" title="Сливочное крем-брюле с карамельной подливкой">Сливочное крем-брюле с карамельной подливкой</a>
-          </h1>
+          </h2>
           <div>
-            <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+            <a href="#" class="btn btn-fastlook" title="Быстрый просмотр">Быстрый просмотр</a>
           </div>
         </article>
-        <article>
+        <article class="catalog-item">
           <div>
-            <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-            <span>325 <span>&#x584;/кг</span></span>
+            <img src="http://placehold.it/267x267" width="267" height="267" alt="">
+            <span>325 <span class="catalog-item-currency">&#x584;/кг</span></span>
           </div>
-          <h1>
+          <h2>
             <a href="#" title="Сливочное с брусничным джемом">Сливочное с брусничным джемом</a>
-          </h1>
+          </h2>
           <div>
-            <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+            <a href="#" class="btn btn-fastlook" title="Быстрый просмотр">Быстрый просмотр</a>
           </div>
         </article>
-        <article>
+        <article class="catalog-item">
           <div>
-            <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-            <span>410 <span>&#x584;/кг</span></span>
+            <img src="http://placehold.it/267x267" width="267" height="267" alt="">
+            <span>410 <span class="catalog-item-currency">&#x584;/кг</span></span>
           </div>
-          <h1>
+          <h2>
             <a href="#" title="Сливочно-черничное с цельными ягодами черники">Сливочно-черничное с цельными ягодами черники</a>
-          </h1>
+          </h2>
           <div>
-            <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+            <a href="#" class="btn btn-fastlook" title="Быстрый просмотр">Быстрый просмотр</a>
           </div>
         </article>
-        <article>
+        <article class="catalog-item">
           <div>
-            <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-            <span>375 <span>&#x584;/кг</span></span>
+            <img src="http://placehold.it/267x267" width="267" height="267" alt="">
+            <span>375 <span class="catalog-item-currency">&#x584;/кг</span></span>
           </div>
-          <h1>
+          <h2>
             <a href="#" title="Сливочно-лимонное с карамельной присыпкой">Сливочно-лимонное с карамельной присыпкой</a>
-          </h1>
+          </h2>
           <div>
-            <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+            <a href="#" class="btn btn-fastlook" title="Быстрый просмотр">Быстрый просмотр</a>
           </div>
         </article>
-        <article>
+        <article class="catalog-item">
           <div>
-            <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-            <span>320 <span>&#x584;/кг</span></span>
+            <img src="http://placehold.it/267x267" width="267" height="267" alt="">
+            <span>320 <span class="catalog-item-currency">&#x584;/кг</span></span>
           </div>
-          <h1>
+          <h2>
             <a href="#" title="Сливочное с шоколадной стружкой">Сливочное с шоколадной стружкой</a>
-          </h1>
+          </h2>
           <div>
-            <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+            <a href="#" class="btn btn-fastlook" title="Быстрый просмотр">Быстрый просмотр</a>
           </div>
         </article>
-        <article>
+        <article class="catalog-item">
           <div>
-            <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-            <span>440 <span>&#x584;/кг</span></span>
+            <img src="http://placehold.it/267x267" width="267" height="267" alt="">
+            <span>440 <span class="catalog-item-currency">&#x584;/кг</span></span>
           </div>
-          <h1>
+          <h2>
             <a href="#" title="Сливочно-ванильное с кусочками шоколада">Сливочно-ванильное с кусочками шоколада</a>
-          </h1>
+          </h2>
           <div>
-            <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+            <a href="#" class="btn btn-fastlook" title="Быстрый просмотр">Быстрый просмотр</a>
           </div>
         </article>
-        <article>
+        <article class="catalog-item">
           <div>
-            <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-            <span>435 <span>&#x584;/кг</span></span>
+            <img src="http://placehold.it/267x267" width="267" height="267" alt="">
+            <span>435 <span class="catalog-item-currency">&#x584;/кг</span></span>
           </div>
-          <h1>
+          <h2>
             <a href="#" title="Сливочное с ментоловым сиропом">Сливочное с ментоловым сиропом</a>
-          </h1>
+          </h2>
           <div>
-            <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+            <a href="#" class="btn btn-fastlook" title="Быстрый просмотр">Быстрый просмотр</a>
           </div>
         </article>
-        <article>
+        <article class="catalog-item">
           <div>
-            <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-            <span>355 <span>&#x584;/кг</span></span>
+            <img src="http://placehold.it/267x267" width="267" height="267" alt="">
+            <span>355 <span class="catalog-item-currency">&#x584;/кг</span></span>
           </div>
-          <h1>
+          <h2>
             <a href="#" title="Сливочное с кусочками черного шоколада">Сливочное с кусочками черного шоколада</a>
-          </h1>
+          </h2>
           <div>
-            <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+            <a href="#" class="btn btn-fastlook" title="Быстрый просмотр">Быстрый просмотр</a>
           </div>
         </article>
-        <article>
+        <article class="catalog-item">
           <div>
-            <img src="http://placehold.it/200x200" width="200" height="200" alt="">
-            <span>420 <span>&#x584;/кг</span></span>
+            <img src="http://placehold.it/267x267" width="267" height="267" alt="">
+            <span class="catalog-item-currency">420 <span>&#x584;/кг</span></span>
           </div>
-          <h1>
+          <h2>
             <a href="#" title="Сливочное с мятным сиропом">Сливочное с мятным сиропом</a>
-          </h1>
+          </h2>
           <div>
-            <button class="btn btn-fastlook" type="button">Быстрый просмотр</button>
+            <a href="#" class="btn btn-fastlook" title="Быстрый просмотр">Быстрый просмотр</a>
           </div>
         </article>
       </section>
       <section class="page-numbers">
-        <div class="prev"></div>
         <ul>
           <li>
             <a href="#" class="prev" title="Предыдущая страница"></a>
@@ -344,7 +363,7 @@
             <a href="#" title="Страница 5">5</a>
           </li>
           <li>
-            <a href="#" class="next" title="Следующая страница"></div>
+            <a href="#" class="next" title="Следующая страница"></a>
           </li>
         </ul>
       </section>
@@ -385,7 +404,7 @@
         </section>
         <section class="footer-copyright">
           <a href="https://htmlacademy.ru/intensive/htmlcss" title="HTML Academy">
-            <img src="http://placehold.it/150x80" width="150" height="80" alt="HTML Academy">
+            <img src="http://placehold.it/108x38" width="108" height="38" alt="HTML Academy">
           </a>
           <p>
             Сделано в
