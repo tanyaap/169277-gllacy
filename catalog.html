@@ -7,38 +7,38 @@
   </head>
   <body>
     <header class="main-header">
-      <div class="container"> <!-- класс-центровщик здесь и далее -->
+      <div class="container clearfix"> <!-- класс-центровщик здесь и далее -->
         <div class="logo">
           <a href="index.html" title="Gllacy Shop">
             <img src="img/logo.png" width="154" height="64" alt="Gllacy Shop">
           </a>
         </div>
-        <nav class="main-navigaion">
-          <ul>
-            <li>
+        <nav class="main-navigation">
+          <ul class="first-catalog">
+            <li class="first-catalog-item">
               <a href="#" title="Каталог">Каталог</a>
-                <ul>
-                  <li>
+                <ul class="second-catalog">
+                  <li class="second-catalog-item">
                     <a href="#" title="Новинки">Новинки</a>
                   </li>
-                  <li>
+                  <li class="second-catalog-item">
                     <a title="Сливочное">Сливочное</a>
                   </li>
-                  <li>
+                  <li class="second-catalog-item">
                     <a href="#" title="Щербеты">Щербеты</a>
                   </li>
-                  <li>
+                  <li class="second-catalog-item">
                     <a href="#" title="Фруктовый лед">Фруктовый лед</a>
                   </li>
-                  <li>
+                  <li class="second-catalog-item">
                     <a href="#" title="Мелорин">Мелорин</a>
                   </li>
                 </ul>
             </li>
-            <li>
+            <li class="first-catalog-item">
               <a href="#" title="Доставка и оплата">Доставка и оплата</a>
             </li>
-            <li>
+            <li class="first-catalog-item">
               <a href="#" title="О компании">О компании</a>
             </li>
           </ul>
@@ -74,39 +74,41 @@
             </div>
           </div>
           <div class="cart-block">
-            <a class="cart-full" href="#" title="Корзина">2 товара</a>
-              <div>
-                <table>
-                  <tr>
-                    <td><button type="button">Удалить</button></td>
-                    <td>
-                      <a href="#" title="Пломбир с апельсиновым джемом">
-                        <img src="img/ice-cream-cart1.jpg" width="33" height="33" alt="">
-                      </a>
-                    </td>
-                    <td>
-                      <a href="#" title="Пломбир с апельсиновым джемом">Пломбир с апельсиновым джемом</a>
-                    </td>
-                    <td>1,5 кг &#215; 200 <span>руб.</span></td>
-                    <td>300 <span>руб.</span></td>
-                  </tr>
-                  <tr>
-                    <td><button type="button">Удалить</button></td>
-                    <td>
-                      <a href="#" title="Клубничный пломбир с присыпкой из белого шоколада">
-                        <img src="img/ice-cream-cart2.jpg" width="33" height="33" alt="">
-                      </a>
-                    </td>
-                    <td>
-                      <a href="#" title="Клубничный пломбир с присыпкой из белого шоколада">Клубничный пломбир с присыпкой из белого шоколада</a>
-                    </td>
-                    <td>1,5 кг &#215; 300 <span>руб.</span></td>
-                    <td>450 <span>руб.</span></td>
-                  </tr>
-                </table>
+            <a class="cart-items" href="#" title="Корзина">2 товара</a>
+            <div class="cart-full">
+              <table class="cart-content">
+                <tr>
+                  <td><button type="button">Удалить</button></td>
+                  <td>
+                    <a href="#" title="Пломбир с апельсиновым джемом">
+                      <img src="img/ice-cream-cart1.jpg" width="33" height="33" alt="">
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#" title="Пломбир с апельсиновым джемом">Пломбир с апельсиновым джемом</a>
+                  </td>
+                  <td>1,5 кг &#215; 200 <span>руб.</span></td>
+                  <td>300 <span>руб.</span></td>
+                </tr>
+                <tr>
+                  <td><button type="button">Удалить</button></td>
+                  <td>
+                    <a href="#" title="Клубничный пломбир с присыпкой из белого шоколада">
+                      <img src="img/ice-cream-cart2.jpg" width="33" height="33" alt="">
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#" title="Клубничный пломбир с присыпкой из белого шоколада">Клубничный пломбир с присыпкой из белого шоколада</a>
+                  </td>
+                  <td>1,5 кг &#215; 300 <span>руб.</span></td>
+                  <td>450 <span>руб.</span></td>
+                </tr>
+              </table>
+              <div class="cart-sum">
                 <span>Итого: 750 <span>руб.</span></span>
                 <a href="#" class="cart-order" title="Оформить заказ">Оформить заказ</a>
               </div>
+            </div>
           </div>
         </div>
         <div class="header-info-block">
@@ -115,7 +117,7 @@
         </div>
       </div>
     </header>
-    <main class="container">
+    <main class="container clearfix">
       <div class="main-menu-header">
         <ul class="main-breadcrumbs">
           <li>
@@ -130,79 +132,81 @@
         </ul>
         <h1 class="main-heading">Сливочное мороженое</h1>
       </div>
-      <form name="preferences-form" action="https://echo.htmlacademy.ru/" method="get">
-        <fieldset class="preferences">
-          <legend>Сортировка:</legend>
-            <select name="preferences">
-              <option value="sort-popularity">по популярности</option>
-              <option value="sort-price-lower">сначала недорогие</option>
-              <option value="sort-price-higher">сначала дорогие</option>
-              <option value="sort-fat-content">по жирности</option>
-            </select>
-        </fieldset>
-        <div class="range-manage">
-          <p>Цена: 100 <span class="currency">руб.</span> - 500 <span class="currency">руб.</span></p>
-            <div class="scale">
-              <div class="scale-over"></div>
-              <div class="switch"></div>
-              <div class="switch"></div>
-            </div>
-        </div>
-        <fieldset class="fat-content">
-          <legend>Жирность:</legend>
-            <ul>
-              <li>
-                <input type="radio" name="fat-content-field" value="0%" id="fat-zero-percent">
-                <label for="fat-zero-percent">0%</label>
-              </li>
-              <li>
-                <input type="radio" name="fat-content-field" value="up-to-10%" id="fat-ten-percent" checked>
-                <label for="fat-ten-percent">до 10%</label>
-              </li>
-              <li>
-                <input type="radio" name="fat-content-field" value="up-to-30%" id="fat-thirty-percent">
-                <label for="fat-thirty-percent">до 30%</label>
-              </li>
-              <li>
-                <input type="radio" name="fat-content-field" value="over-30%" id="fat-overthirty-percent">
-                <label for="fat-overthirty-percent">выше 30%</label>
-              </li>
-            </ul>
-        </fieldset>
-        <fieldset class="filling">
-          <legend>Наполнители:</legend>
-            <ul>
-              <li>
-                <input type="checkbox" name="filling-field" value="choco" id="choco-field" checked>
-                <label for="choco-field">шоколадные</label>
-              </li>
-              <li>
-                <input type="checkbox" name="filling-field" value="sugar" id="sugar-field" checked>
-                <label for="sugar-field">сахарные присыпки</label>
-              </li>
-              <li>
-                <input type="checkbox" name="filling-field" value="fruit" id="fruit-field">
-                <label for="fruit-field">фрукты</label>
-              </li>
-              <li>
-                <input type="checkbox" name="filling-field" value="syrup" id="syrup-field">
-                <label for="syrup-field">сиропы</label>
-              </li>
-              <li>
-                <input type="checkbox" name="filling-field" value="jam" id="jam-field">
-                <label for="jam-field">джемы</label>
-              </li>
-            </ul>
-        </fieldset>
-        <button class="btn-catalog-apply" type="submit">Применить</button>
-      </form>
+      <div class="forms-block">
+        <form name="preferences-form" action="https://echo.htmlacademy.ru/" method="get">
+          <fieldset class="pref-block preferences">
+            <legend>Сортировка:</legend>
+              <select name="preferences">
+                <option value="sort-popularity">по популярности</option>
+                <option value="sort-price-lower">сначала недорогие</option>
+                <option value="sort-price-higher">сначала дорогие</option>
+                <option value="sort-fat-content">по жирности</option>
+              </select>
+          </fieldset>
+          <div class="pref-block range-manage">
+            <p>Цена: 100 <span class="currency">руб.</span> - 500 <span class="currency">руб.</span></p>
+              <div class="scale">
+                <div class="scale-over"></div>
+                <div class="switch"></div>
+                <div class="switch"></div>
+              </div>
+          </div>
+          <fieldset class="pref-block fat-content">
+            <legend>Жирность:</legend>
+              <ul>
+                <li>
+                  <input type="radio" name="fat-content-field" value="0%" id="fat-zero-percent">
+                  <label for="fat-zero-percent">0%</label>
+                </li>
+                <li>
+                  <input type="radio" name="fat-content-field" value="up-to-10%" id="fat-ten-percent" checked>
+                  <label for="fat-ten-percent">до 10%</label>
+                </li>
+                <li>
+                  <input type="radio" name="fat-content-field" value="up-to-30%" id="fat-thirty-percent">
+                  <label for="fat-thirty-percent">до 30%</label>
+                </li>
+                <li>
+                  <input type="radio" name="fat-content-field" value="over-30%" id="fat-overthirty-percent">
+                  <label for="fat-overthirty-percent">выше 30%</label>
+                </li>
+              </ul>
+          </fieldset>
+          <fieldset class="pref-block filling">
+            <legend>Наполнители:</legend>
+              <ul>
+                <li>
+                  <input type="checkbox" name="filling-field" value="choco" id="choco-field" checked>
+                  <label for="choco-field">шоколадные</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="filling-field" value="sugar" id="sugar-field" checked>
+                  <label for="sugar-field">сахарные присыпки</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="filling-field" value="fruit" id="fruit-field">
+                  <label for="fruit-field">фрукты</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="filling-field" value="syrup" id="syrup-field">
+                  <label for="syrup-field">сиропы</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="filling-field" value="jam" id="jam-field">
+                  <label for="jam-field">джемы</label>
+                </li>
+              </ul>
+          </fieldset>
+          <button class="btn-catalog-apply" type="submit">Применить</button>
+        </form>
+      </div>
       <section class="catalog-items-block">
         <article class="catalog-item">
           <div>
             <img src="img/catalog/item1.jpg" width="267" height="267" alt="">
             <span>310 <span class="catalog-item-currency">&#x584;/кг</span></span>
           </div>
-          <h2>
+          <h2 class="secondary-heading">
             <a href="#" title="Сливочное с апельсиновым джемом и цитрусовой стружкой">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
           </h2>
           <div>
@@ -214,7 +218,7 @@
             <img src="img/catalog/item2.jpg" width="267" height="267" alt="">
             <span>380 <span class="catalog-item-currency">&#x584;/кг</span></span>
           </div>
-          <h2>
+          <h2 class="secondary-heading">
             <a href="#" title="Сливочно-кофейное с кусочками шоколада">Сливочно-кофейное с кусочками шоколада</a>
           </h2>
           <div>
@@ -226,7 +230,7 @@
             <img src="img/catalog/item3.jpg" width="266" height="267" alt="">
             <span>355 <span class="catalog-item-currency">&#x584;/кг</span></span>
           </div>
-          <h2>
+          <h2 class="secondary-heading">
             <a href="#" title="Сливочно-клубничное с присыпкой из белого шоколада">Сливочно-клубничное с присыпкой из белого шоколада</a>
           </h2>
           <div>
@@ -238,7 +242,7 @@
             <img src="img/catalog/item4.jpg" width="267" height="267" alt="">
             <span>415 <span class="catalog-item-currency">&#x584;/кг</span></span>
           </div>
-          <h2>
+          <h2 class="secondary-heading">
             <a href="#" title="Сливочное крем-брюле с карамельной подливкой">Сливочное крем-брюле с карамельной подливкой</a>
           </h2>
           <div>
@@ -250,7 +254,7 @@
             <img src="img/catalog/item5.jpg" width="267" height="267" alt="">
             <span>325 <span class="catalog-item-currency">&#x584;/кг</span></span>
           </div>
-          <h2>
+          <h2 class="secondary-heading">
             <a href="#" title="Сливочное с брусничным джемом">Сливочное с брусничным джемом</a>
           </h2>
           <div>
@@ -262,7 +266,7 @@
             <img src="img/catalog/item6.jpg" width="267" height="267" alt="">
             <span>410 <span class="catalog-item-currency">&#x584;/кг</span></span>
           </div>
-          <h2>
+          <h2 class="secondary-heading">
             <a href="#" title="Сливочно-черничное с цельными ягодами черники">Сливочно-черничное с цельными ягодами черники</a>
           </h2>
           <div>
@@ -274,7 +278,7 @@
             <img src="img/catalog/item7.jpg" width="267" height="267" alt="">
             <span>375 <span class="catalog-item-currency">&#x584;/кг</span></span>
           </div>
-          <h2>
+          <h2 class="secondary-heading">
             <a href="#" title="Сливочно-лимонное с карамельной присыпкой">Сливочно-лимонное с карамельной присыпкой</a>
           </h2>
           <div>
@@ -286,7 +290,7 @@
             <img src="img/catalog/item8.jpg" width="267" height="267" alt="">
             <span>320 <span class="catalog-item-currency">&#x584;/кг</span></span>
           </div>
-          <h2>
+          <h2 class="secondary-heading">
             <a href="#" title="Сливочное с шоколадной стружкой">Сливочное с шоколадной стружкой</a>
           </h2>
           <div>
@@ -298,7 +302,7 @@
             <img src="img/catalog/item9.jpg" width="267" height="267" alt="">
             <span>440 <span class="catalog-item-currency">&#x584;/кг</span></span>
           </div>
-          <h2>
+          <h2 class="secondary-heading">
             <a href="#" title="Сливочно-ванильное с кусочками шоколада">Сливочно-ванильное с кусочками шоколада</a>
           </h2>
           <div>
@@ -310,7 +314,7 @@
             <img src="img/catalog/item10.jpg" width="267" height="267" alt="">
             <span>435 <span class="catalog-item-currency">&#x584;/кг</span></span>
           </div>
-          <h2>
+          <h2 class="secondary-heading">
             <a href="#" title="Сливочное с ментоловым сиропом">Сливочное с ментоловым сиропом</a>
           </h2>
           <div>
@@ -322,7 +326,7 @@
             <img src="img/catalog/item11.jpg" width="267" height="267" alt="">
             <span>355 <span class="catalog-item-currency">&#x584;/кг</span></span>
           </div>
-          <h2>
+          <h2 class="secondary-heading">
             <a href="#" title="Сливочное с кусочками черного шоколада">Сливочное с кусочками черного шоколада</a>
           </h2>
           <div>
@@ -334,7 +338,7 @@
             <img src="img/catalog/item12.jpg" width="267" height="267" alt="">
             <span class="catalog-item-currency">420 <span>&#x584;/кг</span></span>
           </div>
-          <h2>
+          <h2 class="secondary-heading">
             <a href="#" title="Сливочное с мятным сиропом">Сливочное с мятным сиропом</a>
           </h2>
           <div>
@@ -369,7 +373,7 @@
       </section>
     </main>
     <footer class="main-footer">
-      <div class="container">
+      <div class="container clearfix">
         <section class="footer-social">
           <ul>
             <li>
