@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Глейси</title>
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -45,36 +46,36 @@
         </nav>
         <div class="user-block">
           <div class="search-block">
-            <button class="search" type="button"></button>
-            <div class="form-block search-line">
-              <form name="search-form" action="https://echo.htmlacademy.ru" method="get">
-                <div class="form-field-block">
-                  <input type="search" name="search-text" id="search-field" value="" placeholder="Что ищем?">
-                  <label for="search-field">Что ищем?</label>
-                </div>
-              </form>
-            </div>
+            <a href="#" class="search" title="Поиск">Поиск</a>
+              <div class="form-block search-line">
+                <form name="search-form" action="https://echo.htmlacademy.ru" method="get">
+                  <div class="form-field-block">
+                    <input type="search" name="search-text" id="search-field" value="">
+                    <label for="search-field">Что ищем?</label>
+                  </div>
+                </form>
+              </div>
           </div>
           <div class="login-block">
-            <button class="login" type="button">Вход</button>
-            <div class="form-block login-field">
-              <form name="login-form" action="https://echo.htmlacademy.ru" method="get">
-                <div class="form-field-block">
-                  <input type="email" name="email" id="email-field" value="" placeholder="Электронная почта">
-                  <label for="email-field">Электронная почта</label>
-                </div>
-                <div class="form-field-block">
-                  <input type="password" name="password" id="password-field" value="" placeholder="Пароль">
-                  <label for="password-field">Пароль</label>
-                </div>
-                <button class="btn btn-login" type="submit">Войти</button>
-                <a class="login" href="#" title="Забыли пароль?">Забыли пароль?</a>
-                <a class="login" href="#" title="Новая регистрация">Новая регистрация</a>
-              </form>
+            <a href="#" class="login" title="Вход">Вход</a>
+              <div class="form-block login-field">
+                <form name="login-form" action="https://echo.htmlacademy.ru" method="get">
+                  <div class="form-field-block">
+                    <input type="email" name="email" id="email-field" value="">
+                    <label for="email-field">Электронная почта</label>
+                  </div>
+                  <div class="form-field-block">
+                    <input type="password" name="password" id="password-field" value="">
+                    <label for="password-field">Пароль</label>
+                  </div>
+                  <button class="btn btn-login" type="submit">Войти</button>
+                  <a href="#" class="login" title="Забыли пароль?">Забыли пароль?</a>
+                  <a href="#" class="login" title="Новая регистрация">Новая регистрация</a>
+                </form>
             </div>
           </div>
           <div class="cart-block">
-            <a class="cart-items" href="#" title="Корзина">2 товара</a>
+            <a href="#" class="cart-items" title="Корзина">2 товара</a>
             <div class="cart-full">
               <table class="cart-content">
                 <tr>
@@ -106,8 +107,8 @@
               </table>
               <div class="cart-sum">
                 <span>Итого: 750 <span>руб.</span></span>
-                <a href="#" class="cart-order" title="Оформить заказ">Оформить заказ</a>
               </div>
+              <a href="#" class="btn cart-order" title="Оформить заказ">Оформить заказ</a>
             </div>
           </div>
         </div>
@@ -143,14 +144,14 @@
                 <option value="sort-fat-content">по жирности</option>
               </select>
           </fieldset>
-          <div class="pref-block range-manage">
-            <p>Цена: 100 <span class="currency">руб.</span> - 500 <span class="currency">руб.</span></p>
+          <fieldset class="pref-block range-manage">
+            <legend>Цена: 100 <span class="currency">руб.</span> - 500 <span class="currency">руб.</span></legend>
               <div class="scale">
                 <div class="scale-over"></div>
                 <div class="switch"></div>
                 <div class="switch"></div>
               </div>
-          </div>
+          </fieldset>
           <fieldset class="pref-block fat-content">
             <legend>Жирность:</legend>
               <ul>
@@ -204,144 +205,168 @@
         <article class="catalog-item">
           <div>
             <img src="img/catalog/item1.jpg" width="267" height="267" alt="">
-            <span>310 <span class="catalog-item-currency">&#x584;/кг</span></span>
+            <div class="price">
+              <span>310 <span class="catalog-item-currency">&#x584;/кг</span></span>
+            </div>
           </div>
           <h2 class="secondary-heading">
             <a href="#" title="Сливочное с апельсиновым джемом и цитрусовой стружкой">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
           </h2>
-          <div>
+          <div class="fastlook">
             <a href="#" class="btn btn-fastlook" title="Быстрый просмотр">Быстрый просмотр</a>
           </div>
         </article>
         <article class="catalog-item">
           <div>
             <img src="img/catalog/item2.jpg" width="267" height="267" alt="">
-            <span>380 <span class="catalog-item-currency">&#x584;/кг</span></span>
+            <div class="price">
+              <span>380 <span class="catalog-item-currency">&#x584;/кг</span></span>
+            </div>
           </div>
           <h2 class="secondary-heading">
             <a href="#" title="Сливочно-кофейное с кусочками шоколада">Сливочно-кофейное с кусочками шоколада</a>
           </h2>
-          <div>
+          <div class="fastlook">
             <a href="#" class="btn btn-fastlook" title="Быстрый просмотр">Быстрый просмотр</a>
           </div>
         </article>
         <article class="catalog-item">
           <div>
             <img src="img/catalog/item3.jpg" width="266" height="267" alt="">
-            <span>355 <span class="catalog-item-currency">&#x584;/кг</span></span>
+            <div class="price">
+              <span>355 <span class="catalog-item-currency">&#x584;/кг</span></span>
+            </div>
           </div>
           <h2 class="secondary-heading">
             <a href="#" title="Сливочно-клубничное с присыпкой из белого шоколада">Сливочно-клубничное с присыпкой из белого шоколада</a>
           </h2>
-          <div>
+          <div class="fastlook">
             <a href="#" class="btn btn-fastlook" title="Быстрый просмотр">Быстрый просмотр</a>
           </div>
         </article>
         <article class="catalog-item">
           <div>
             <img src="img/catalog/item4.jpg" width="267" height="267" alt="">
-            <span>415 <span class="catalog-item-currency">&#x584;/кг</span></span>
+            <div class="price">
+              <span>415 <span class="catalog-item-currency">&#x584;/кг</span></span>
+            </div>
           </div>
           <h2 class="secondary-heading">
             <a href="#" title="Сливочное крем-брюле с карамельной подливкой">Сливочное крем-брюле с карамельной подливкой</a>
           </h2>
-          <div>
+          <div class="fastlook">
             <a href="#" class="btn btn-fastlook" title="Быстрый просмотр">Быстрый просмотр</a>
           </div>
         </article>
         <article class="catalog-item">
           <div>
             <img src="img/catalog/item5.jpg" width="267" height="267" alt="">
-            <span>325 <span class="catalog-item-currency">&#x584;/кг</span></span>
+            <div class="price">
+              <span>325 <span class="catalog-item-currency">&#x584;/кг</span></span>
+            </div>
           </div>
           <h2 class="secondary-heading">
             <a href="#" title="Сливочное с брусничным джемом">Сливочное с брусничным джемом</a>
           </h2>
-          <div>
+          <div class="fastlook">
             <a href="#" class="btn btn-fastlook" title="Быстрый просмотр">Быстрый просмотр</a>
           </div>
         </article>
         <article class="catalog-item">
           <div>
             <img src="img/catalog/item6.jpg" width="267" height="267" alt="">
-            <span>410 <span class="catalog-item-currency">&#x584;/кг</span></span>
+            <div class="price">
+              <span>410 <span class="catalog-item-currency">&#x584;/кг</span></span>
+            </div>
           </div>
           <h2 class="secondary-heading">
             <a href="#" title="Сливочно-черничное с цельными ягодами черники">Сливочно-черничное с цельными ягодами черники</a>
           </h2>
-          <div>
+          <div class="fastlook">
             <a href="#" class="btn btn-fastlook" title="Быстрый просмотр">Быстрый просмотр</a>
           </div>
         </article>
         <article class="catalog-item">
           <div>
             <img src="img/catalog/item7.jpg" width="267" height="267" alt="">
-            <span>375 <span class="catalog-item-currency">&#x584;/кг</span></span>
+            <div class="price">
+              <span>375 <span class="catalog-item-currency">&#x584;/кг</span></span>
+            </div>
           </div>
           <h2 class="secondary-heading">
             <a href="#" title="Сливочно-лимонное с карамельной присыпкой">Сливочно-лимонное с карамельной присыпкой</a>
           </h2>
-          <div>
+          <div class="fastlook">
             <a href="#" class="btn btn-fastlook" title="Быстрый просмотр">Быстрый просмотр</a>
           </div>
         </article>
         <article class="catalog-item">
           <div>
             <img src="img/catalog/item8.jpg" width="267" height="267" alt="">
-            <span>320 <span class="catalog-item-currency">&#x584;/кг</span></span>
+            <div class="price">
+              <span>320 <span class="catalog-item-currency">&#x584;/кг</span></span>
+            </div>
           </div>
           <h2 class="secondary-heading">
             <a href="#" title="Сливочное с шоколадной стружкой">Сливочное с шоколадной стружкой</a>
           </h2>
-          <div>
+          <div class="fastlook">
             <a href="#" class="btn btn-fastlook" title="Быстрый просмотр">Быстрый просмотр</a>
           </div>
         </article>
         <article class="catalog-item">
           <div>
             <img src="img/catalog/item9.jpg" width="267" height="267" alt="">
-            <span>440 <span class="catalog-item-currency">&#x584;/кг</span></span>
+            <div class="price">
+              <span>440 <span class="catalog-item-currency">&#x584;/кг</span></span>
+            </div>
           </div>
           <h2 class="secondary-heading">
             <a href="#" title="Сливочно-ванильное с кусочками шоколада">Сливочно-ванильное с кусочками шоколада</a>
           </h2>
-          <div>
+          <div class="fastlook">
             <a href="#" class="btn btn-fastlook" title="Быстрый просмотр">Быстрый просмотр</a>
           </div>
         </article>
         <article class="catalog-item">
           <div>
             <img src="img/catalog/item10.jpg" width="267" height="267" alt="">
-            <span>435 <span class="catalog-item-currency">&#x584;/кг</span></span>
+            <div class="price">
+              <span>435 <span class="catalog-item-currency">&#x584;/кг</span></span>
+            </div>
           </div>
           <h2 class="secondary-heading">
             <a href="#" title="Сливочное с ментоловым сиропом">Сливочное с ментоловым сиропом</a>
           </h2>
-          <div>
+          <div class="fastlook">
             <a href="#" class="btn btn-fastlook" title="Быстрый просмотр">Быстрый просмотр</a>
           </div>
         </article>
         <article class="catalog-item">
           <div>
             <img src="img/catalog/item11.jpg" width="267" height="267" alt="">
-            <span>355 <span class="catalog-item-currency">&#x584;/кг</span></span>
+            <div class="price">
+              <span>355 <span class="catalog-item-currency">&#x584;/кг</span></span>
+            </div>
           </div>
           <h2 class="secondary-heading">
             <a href="#" title="Сливочное с кусочками черного шоколада">Сливочное с кусочками черного шоколада</a>
           </h2>
-          <div>
+          <div class="fastlook">
             <a href="#" class="btn btn-fastlook" title="Быстрый просмотр">Быстрый просмотр</a>
           </div>
         </article>
         <article class="catalog-item">
           <div>
             <img src="img/catalog/item12.jpg" width="267" height="267" alt="">
-            <span class="catalog-item-currency">420 <span>&#x584;/кг</span></span>
+            <div class="price">
+              <span>420 <span class="catalog-item-currency">&#x584;/кг</span></span>
+            </div>
           </div>
           <h2 class="secondary-heading">
             <a href="#" title="Сливочное с мятным сиропом">Сливочное с мятным сиропом</a>
           </h2>
-          <div>
+          <div class="fastlook">
             <a href="#" class="btn btn-fastlook" title="Быстрый просмотр">Быстрый просмотр</a>
           </div>
         </article>
@@ -375,7 +400,7 @@
     <footer class="main-footer">
       <div class="container clearfix">
         <section class="footer-social">
-          <ul>
+          <ul class="social-list">
             <li>
               <a class="social-btn social-btn-tw" href="#" title="Твиттер">Твиттер</a>
             </li>
@@ -391,7 +416,7 @@
           </ul>
         </section>
         <section class="footer-breadcrumbs">
-            <ul>
+            <ul class="footer-breadcrumbs-list">
               <li>
                 <a href="#" title="Для поставщиков">Для поставщиков</a>
               </li>
