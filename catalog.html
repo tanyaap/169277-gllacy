@@ -7,7 +7,7 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="main-header">
+    <header class="main-header main-header-catalog">
       <div class="container clearfix"> <!-- класс-центровщик здесь и далее -->
         <div class="logo">
           <a href="index.html" title="Gllacy Shop">
@@ -15,31 +15,31 @@
           </a>
         </div>
         <nav class="main-navigation">
-          <ul class="first-catalog">
-            <li class="first-catalog-item">
+          <ul class="main-menu-list">
+            <li class="main-menu-item">
               <a href="#" title="Каталог">Каталог</a>
-                <ul class="second-catalog">
-                  <li class="second-catalog-item">
+                <ul class="inner-menu-list">
+                  <li class="inner-menu-item">
                     <a href="#" title="Новинки">Новинки</a>
                   </li>
-                  <li class="second-catalog-item">
+                  <li class="inner-menu-item">
                     <a title="Сливочное">Сливочное</a>
                   </li>
-                  <li class="second-catalog-item">
+                  <li class="inner-menu-item">
                     <a href="#" title="Щербеты">Щербеты</a>
                   </li>
-                  <li class="second-catalog-item">
+                  <li class="inner-menu-item">
                     <a href="#" title="Фруктовый лед">Фруктовый лед</a>
                   </li>
-                  <li class="second-catalog-item">
+                  <li class="inner-menu-item">
                     <a href="#" title="Мелорин">Мелорин</a>
                   </li>
                 </ul>
             </li>
-            <li class="first-catalog-item">
+            <li class="main-menu-item">
               <a href="#" title="Доставка и оплата">Доставка и оплата</a>
             </li>
-            <li class="first-catalog-item">
+            <li class="main-menu-item">
               <a href="#" title="О компании">О компании</a>
             </li>
           </ul>
@@ -56,7 +56,7 @@
                 </form>
               </div>
           </div>
-          <div class="login-block">
+          <div class="login-block clearfix">
             <a href="#" class="login" title="Вход">Вход</a>
               <div class="form-block login-field">
                 <form name="login-form" action="https://echo.htmlacademy.ru" method="get">
@@ -69,10 +69,12 @@
                     <label for="password-field">Пароль</label>
                   </div>
                   <button class="btn btn-login" type="submit">Войти</button>
-                  <a href="#" class="login" title="Забыли пароль?">Забыли пароль?</a>
-                  <a href="#" class="login" title="Новая регистрация">Новая регистрация</a>
+                  <div class="help-block">
+                    <a href="#" title="Забыли пароль?">Забыли пароль?</a>
+                    <a href="#" title="Новая регистрация">Новая регистрация</a>
+                  </div>
                 </form>
-            </div>
+              </div>
           </div>
           <div class="cart-block">
             <a href="#" class="cart-items" title="Корзина">2 товара</a>
@@ -88,8 +90,8 @@
                   <td>
                     <a href="#" title="Пломбир с апельсиновым джемом">Пломбир с апельсиновым джемом</a>
                   </td>
-                  <td>1,5 кг &#215; 200 <span>руб.</span></td>
-                  <td>300 <span>руб.</span></td>
+                  <td><span>1,5 кг &#215;</span><span class="item-price">200 руб.</span></td>
+                  <td><span>300 руб.</span></td>
                 </tr>
                 <tr>
                   <td><button type="button">Удалить</button></td>
@@ -101,12 +103,12 @@
                   <td>
                     <a href="#" title="Клубничный пломбир с присыпкой из белого шоколада">Клубничный пломбир с присыпкой из белого шоколада</a>
                   </td>
-                  <td>1,5 кг &#215; 300 <span>руб.</span></td>
-                  <td>450 <span>руб.</span></td>
+                  <td><span>1,5 кг &#215;</span><span class="item-price">300 руб.</span></td>
+                  <td><span>450 руб.</span></td>
                 </tr>
               </table>
               <div class="cart-sum">
-                <span>Итого: 750 <span>руб.</span></span>
+                <span>Итого: 750 руб.</span>
               </div>
               <a href="#" class="btn cart-order" title="Оформить заказ">Оформить заказ</a>
             </div>
@@ -114,7 +116,7 @@
         </div>
         <div class="header-info-block">
           <span>с 10 до 20 ежедневно</span><br>
-          <a href="tel:+78124502525" title="+7 (812) 450-25-25">+7 (812) 450-25-25</a>
+          <a href="tel:+78124502525" title="+7 (812) 450-25-25">8 812 450-25-25</a>
         </div>
       </div>
     </header>
@@ -201,12 +203,13 @@
           <button class="btn-catalog-apply" type="submit">Применить</button>
         </form>
       </div>
-      <section class="catalog-items-block">
+      <section class="catalog-items-block catalog-items-block-catalog">
         <article class="catalog-item">
           <div>
             <img src="img/catalog/item1.jpg" width="267" height="267" alt="">
             <div class="price">
-              <span>310 <span class="catalog-item-currency">&#x584;/кг</span></span>
+              <span>310</span>
+                <span class="catalog-item-currency">&#8381;</span><span class="catalog-item-weight">/кг</span>
             </div>
           </div>
           <h2 class="secondary-heading">
@@ -220,7 +223,8 @@
           <div>
             <img src="img/catalog/item2.jpg" width="267" height="267" alt="">
             <div class="price">
-              <span>380 <span class="catalog-item-currency">&#x584;/кг</span></span>
+              <span>380</span>
+                <span class="catalog-item-currency">&#8381;</span><span class="catalog-item-weight">/кг</span>
             </div>
           </div>
           <h2 class="secondary-heading">
@@ -234,7 +238,8 @@
           <div>
             <img src="img/catalog/item3.jpg" width="266" height="267" alt="">
             <div class="price">
-              <span>355 <span class="catalog-item-currency">&#x584;/кг</span></span>
+              <span>355</span>
+                <span class="catalog-item-currency">&#8381;</span><span class="catalog-item-weight">/кг</span>
             </div>
           </div>
           <h2 class="secondary-heading">
@@ -248,7 +253,8 @@
           <div>
             <img src="img/catalog/item4.jpg" width="267" height="267" alt="">
             <div class="price">
-              <span>415 <span class="catalog-item-currency">&#x584;/кг</span></span>
+              <span>415</span>
+                <span class="catalog-item-currency">&#8381;</span><span class="catalog-item-weight">/кг</span>
             </div>
           </div>
           <h2 class="secondary-heading">
@@ -262,7 +268,8 @@
           <div>
             <img src="img/catalog/item5.jpg" width="267" height="267" alt="">
             <div class="price">
-              <span>325 <span class="catalog-item-currency">&#x584;/кг</span></span>
+              <span>325</span>
+                <span class="catalog-item-currency">&#8381;</span><span class="catalog-item-weight">/кг</span>
             </div>
           </div>
           <h2 class="secondary-heading">
@@ -276,7 +283,8 @@
           <div>
             <img src="img/catalog/item6.jpg" width="267" height="267" alt="">
             <div class="price">
-              <span>410 <span class="catalog-item-currency">&#x584;/кг</span></span>
+              <span>410</span>
+                <span class="catalog-item-currency">&#8381;</span><span class="catalog-item-weight">/кг</span>
             </div>
           </div>
           <h2 class="secondary-heading">
@@ -290,7 +298,8 @@
           <div>
             <img src="img/catalog/item7.jpg" width="267" height="267" alt="">
             <div class="price">
-              <span>375 <span class="catalog-item-currency">&#x584;/кг</span></span>
+              <span>375</span>
+                <span class="catalog-item-currency">&#8381;</span><span class="catalog-item-weight">/кг</span>
             </div>
           </div>
           <h2 class="secondary-heading">
@@ -304,7 +313,8 @@
           <div>
             <img src="img/catalog/item8.jpg" width="267" height="267" alt="">
             <div class="price">
-              <span>320 <span class="catalog-item-currency">&#x584;/кг</span></span>
+              <span>320</span>
+                <span class="catalog-item-currency">&#8381;</span><span class="catalog-item-weight">/кг</span>
             </div>
           </div>
           <h2 class="secondary-heading">
@@ -318,7 +328,8 @@
           <div>
             <img src="img/catalog/item9.jpg" width="267" height="267" alt="">
             <div class="price">
-              <span>440 <span class="catalog-item-currency">&#x584;/кг</span></span>
+              <span>440</span>
+                <span class="catalog-item-currency">&#8381;</span><span class="catalog-item-weight">/кг</span>
             </div>
           </div>
           <h2 class="secondary-heading">
@@ -332,7 +343,8 @@
           <div>
             <img src="img/catalog/item10.jpg" width="267" height="267" alt="">
             <div class="price">
-              <span>435 <span class="catalog-item-currency">&#x584;/кг</span></span>
+              <span>435</span>
+                <span class="catalog-item-currency">&#8381;</span><span class="catalog-item-weight">/кг</span>
             </div>
           </div>
           <h2 class="secondary-heading">
@@ -346,7 +358,8 @@
           <div>
             <img src="img/catalog/item11.jpg" width="267" height="267" alt="">
             <div class="price">
-              <span>355 <span class="catalog-item-currency">&#x584;/кг</span></span>
+              <span>355</span>
+                <span class="catalog-item-currency">&#8381;</span><span class="catalog-item-weight">/кг</span>
             </div>
           </div>
           <h2 class="secondary-heading">
@@ -360,7 +373,8 @@
           <div>
             <img src="img/catalog/item12.jpg" width="267" height="267" alt="">
             <div class="price">
-              <span>420 <span class="catalog-item-currency">&#x584;/кг</span></span>
+              <span>420</span>
+                <span class="catalog-item-currency">&#8381;</span><span class="catalog-item-weight">/кг</span>
             </div>
           </div>
           <h2 class="secondary-heading">
@@ -371,10 +385,10 @@
           </div>
         </article>
       </section>
-      <section class="page-numbers">
+      <div class="page-numbers clearfix">
         <ul>
           <li>
-            <a href="#" class="prev" title="Предыдущая страница"></a>
+            <a href="#" class="prev" title="Предыдущая страница">&lt;</a>
           </li>
           <li>
             <a class="current-page-number" title="Страница 1">1</a>
@@ -392,13 +406,13 @@
             <a href="#" title="Страница 5">5</a>
           </li>
           <li>
-            <a href="#" class="next" title="Следующая страница"></a>
+            <a href="#" class="next" title="Следующая страница">&gt;</a>
           </li>
         </ul>
-      </section>
+      </div>
     </main>
-    <footer class="main-footer">
-      <div class="container clearfix">
+    <div class="container clearfix">
+      <footer class="main-footer main-footer-catalog clearfix">
         <section class="footer-social">
           <ul class="social-list">
             <li>
@@ -415,19 +429,19 @@
             </li>
           </ul>
         </section>
-        <section class="footer-breadcrumbs">
-            <ul class="footer-breadcrumbs-list">
+        <section class="footer-menu">
+            <ul class="footer-menu-list">
               <li>
                 <a href="#" title="Для поставщиков">Для поставщиков</a>
               </li>
               <li>
-                <a href="#" title="Наши документы">Наши документы</a>
+                <a href="#" title="Наши документы" class="right">Наши документы</a>
               </li>
               <li>
                 <a href="#" title="О производстве">О производстве</a>
               </li>
               <li>
-                <a href="#" title="Экологические стандарты">Экологические стандарты</a>
+                <a href="#" title="Экологические стандарты" class="right">Экологические стандарты</a>
               </li>
             </ul>
         </section>
@@ -441,7 +455,7 @@
             &#169; 2017
           </p>
         </section>
-      </div>
-    </footer>
+      </footer>
+    </div>
   </body>
 </html>
